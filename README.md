@@ -29,9 +29,13 @@ ESP-IDF firmware that exposes USB NCM to macOS and bridges it to Wi-Fi STA. Incl
 **Tech:** ESP32-S2 · ESP-IDF · C/C++ · USB NCM · TinyUSB · Wi-Fi · networking · NVS · TypeScript · CI
 
 ### [Growbox ML Controller](https://github.com/MichalMatu/growbox-ml-controller)
-Production-oriented ESP32-S3/TinyML controller demo with a portable C++ control library, deterministic safety supervisor, generated C inference model, host tests, static analysis and CI-oriented build gates.
+Production-oriented ESP32-S3/TinyML controller demo with a portable C++ control library, deterministic safety supervisor, generated C inference model, host tests, static analysis and CI-oriented build gates. The public web tools include a schema-driven hardware configurator and an interactive 3D chamber configurator.
 
-**Tech:** ESP32-S3 · ESP-IDF · C++17 · CMake/CTest · TinyML · Python · clang-tidy
+**Live 3D configurator:** https://michalmatu.github.io/growbox-ml-controller/chamber-3d
+
+**Hardware/JSON configurator:** https://michalmatu.github.io/growbox-ml-controller/
+
+**Tech:** ESP32-S3 · ESP-IDF · C++17 · CMake/CTest · TinyML · Python · React · Three.js · React Three Fiber · clang-tidy
 
 ### [Local Climate Link](https://github.com/MichalMatu/local-climate-link-starter)
 Local climate automation without a hub: BLE thermometers feed a Shelly Plug Gen3 script that controls heating/cooling locally. Includes diagnostics, device discovery and Android release builds.
