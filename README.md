@@ -6,6 +6,13 @@ I build projects around **ESP32-S3 / ESP32-C6, ESP-IDF, C/C++, PlatformIO, BLE, 
 
 ## Selected projects
 
+### [GrowClip — public showcase](https://github.com/MichalMatu/growclip)
+Public product/demo site for my larger private ESP32-S3 automation platform. The firmware and full Nodeflow runtime remain private; the showcase presents the architecture, product surfaces, diagnostics concepts, hardware direction and an interactive LiteGraph marketing demo.
+
+**Live product page:** https://michalmatu.github.io/growclip/
+
+**Platform behind the showcase:** ESP32-S3 · C/C++ · PlatformIO · Nodeflow · MQTT · BLE · sensors · microSD history · embedded web UI · host-side tests
+
 ### [MatrixHub](https://github.com/MichalMatu/MatrixHub)
 ESP32-S3 firmware and web dashboard for a connected sensor/display platform. Includes BLE scanning, Wi-Fi CSI motion sensing, USB HID, SCD41 environmental sensing, LittleFS logging, HTTPS/JWT security, notifications and a SvelteKit UI.
 
@@ -41,7 +48,7 @@ Local climate automation without a hub: BLE thermometers feed a Shelly Plug Gen3
 
 ## Private flagship project
 
-I am also developing a larger private **ESP32-S3 automation platform** with a node-based automation engine, sensor integrations, SD-card history/archive, embedded web UI and host-side tests. The source is private, but I can discuss the architecture and implementation during a technical interview.
+I am developing a larger private **ESP32-S3 automation platform** with a node-based automation engine, sensor integrations, SD-card history/archive, embedded web UI and host-side tests. The source remains private, while the public [GrowClip showcase](https://michalmatu.github.io/growclip/) presents the product and architecture without exposing the firmware. I can discuss the implementation in detail during a technical interview.
 
 ## Background
 
