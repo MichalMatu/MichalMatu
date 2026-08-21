@@ -29,6 +29,8 @@ Production-oriented ESP32-S3/TinyML controller demo with a portable C++ control 
 ### [Local Climate Link](https://github.com/MichalMatu/local-climate-link-starter)
 Local climate automation without a hub: BLE thermometers feed a Shelly Plug Gen3 script that controls heating/cooling locally. Includes diagnostics, device discovery and Android release builds.
 
+**Live product page:** https://michalmatu.github.io/local-climate-link-starter/
+
 **Tech:** BLE · BTHome v2 · Shelly Script · IoT · Android
 
 ## Hardware and lower-level work
