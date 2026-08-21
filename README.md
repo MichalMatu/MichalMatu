@@ -16,6 +16,11 @@ Native ESP-IDF Zigbee coordinator/gateway using the Espressif Zigbee SDK. Handle
 
 **Tech:** ESP32-C6 · ESP-IDF · C/C++ · Zigbee · ZCL/ZDO · NVS · FreeRTOS
 
+### [ESP32-S2 USB Wi-Fi Bridge](https://github.com/MichalMatu/esp32_s2_wifi)
+ESP-IDF firmware that exposes USB NCM to macOS and bridges it to Wi-Fi STA. Includes provisioning, runtime diagnostics, UART recovery console, flash coredumps, memory/stack monitoring and a TypeScript configuration UI with regression checks.
+
+**Tech:** ESP32-S2 · ESP-IDF · C/C++ · USB NCM · TinyUSB · Wi-Fi · networking · NVS · TypeScript · CI
+
 ### [Growbox ML Controller](https://github.com/MichalMatu/growbox-ml-controller)
 Production-oriented ESP32-S3/TinyML controller demo with a portable C++ control library, deterministic safety supervisor, generated C inference model, host tests, static analysis and CI-oriented build gates.
 
@@ -25,6 +30,12 @@ Production-oriented ESP32-S3/TinyML controller demo with a portable C++ control 
 Local climate automation without a hub: BLE thermometers feed a Shelly Plug Gen3 script that controls heating/cooling locally. Includes diagnostics, device discovery and Android release builds.
 
 **Tech:** BLE · BTHome v2 · Shelly Script · IoT · Android
+
+## Hardware and lower-level work
+
+- [PCB workspace](https://github.com/MichalMatu/pcb) — code-generated schematics with SKiDL/KiCad automation, reusable hardware blocks and an ESP32 DevKitC HAT built around the AXP2101 PMIC.
+- [nRF52840](https://github.com/MichalMatu/nrf52840) — PlatformIO firmware starter with a local board definition, OLED/buttons and quality tooling.
+- [ESP32 Rust](https://github.com/MichalMatu/esp_rs) — `no_std` ESP32-C3 project using `esp-hal`, RISC-V, I²C sensors and quality/dependency checks.
 
 ## Private flagship project
 
