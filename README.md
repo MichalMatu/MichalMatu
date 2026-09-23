@@ -91,10 +91,11 @@ The codebase is split into API, core, database, models, schemas, serializers, se
 | --- | --- | --- |
 | **[ESP32-C6 Zigbee Gateway](https://github.com/MichalMatu/esp32_c6_zigbee)** | Coordinator/gateway with formation, persistence, join/rejoin, discovery, reporting, sleepy-device handling and bounded runtime state | ESP32-C6 · ESP-IDF · C · Zigbee/ZCL/ZDO · FreeRTOS |
 | **[ESP32-S2 USB Wi-Fi Bridge](https://github.com/MichalMatu/esp32_s2_wifi)** | USB NCM ↔ Wi-Fi bridge for macOS with provisioning, diagnostics, UART recovery and coredumps | ESP32-S2 · ESP-IDF · C · TinyUSB · networking · TypeScript |
-| **[PCB workspace](https://github.com/MichalMatu/pcb)** | Code-generated schematics and KiCad automation, reusable hardware blocks and an ESP32 DevKitC HAT around the AXP2101 PMIC | Python · SKiDL · KiCad · pcbnew API |
-| **[ESP32 Rust](https://github.com/MichalMatu/esp_rs)** | `no_std` RISC-V firmware with I²C sensors and Rust quality/dependency tooling | Rust · ESP32-C3 · `esp-hal` · RISC-V |
-| **[nRF52840](https://github.com/MichalMatu/nrf52840)** | Nordic/PlatformIO firmware starter with a local board definition, OLED/buttons and development tooling | nRF52840 · C/C++ · PlatformIO |
-| **[Raspberry Pi Zero appliance](https://github.com/MichalMatu/rp_pi2_zero)** | Headless Linux device setup, systemd hardening/boot optimization and e-paper status integration | Linux · systemd · shell · C/Python |
+| **[ESP32-CAM Telegram](https://github.com/MichalMatu/hardware-lab/tree/main/projects/esp32-cam-telegram)** | ESP32-CAM/OV2640 motion camera with Telegram, microSD and a local web panel; build validated, hardware validation pending | ESP32-CAM · C++ · Arduino · PlatformIO · OV2640 · Telegram |
+| **[PCB workspace](https://github.com/MichalMatu/hardware-lab/tree/main/projects/pcb)** | Code-generated schematics and KiCad automation, reusable hardware blocks and an ESP32 DevKitC HAT around the AXP2101 PMIC | Python · SKiDL · KiCad · pcbnew API |
+| **[ESP32 Rust](https://github.com/MichalMatu/hardware-lab/tree/main/projects/esp_rs)** | `no_std` RISC-V firmware with I²C sensors and Rust quality/dependency tooling | Rust · ESP32-C3 · `esp-hal` · RISC-V |
+| **[nRF52840](https://github.com/MichalMatu/hardware-lab/tree/main/projects/nrf52840)** | Nordic/PlatformIO firmware starter with a local board definition, OLED/buttons and development tooling | nRF52840 · C/C++ · PlatformIO |
+| **[Raspberry Pi Zero appliance](https://github.com/MichalMatu/hardware-lab/tree/main/projects/rp_pi2_zero)** | Headless Linux device setup, systemd hardening/boot optimization and e-paper status integration | Linux · systemd · shell · C/Python |
 
 ---
 
@@ -122,10 +123,11 @@ MediaPipe-based Android project for on-device gesture recognition and gesture-to
 
 ## More selected work
 
+- **[Hardware Lab](https://github.com/MichalMatu/hardware-lab)** — consolidated board bring-up, firmware starters, PCB work and unfinished hardware experiments.
 - **[Local Climate Link](https://github.com/MichalMatu/local-climate-link-starter)** — local BLE/BTHome thermometer → Shelly automation without a cloud service or central hub.
 - **[Miauudio](https://github.com/MichalMatu/miauudio)** — Android-first ambient audio mixer built on a web/Capacitor stack with native Android media integration.
 - **[Arduino MQ](https://github.com/MichalMatu/Arduino_MQ)** — ATmega328P environmental/gas-sensor project with explicit safety limitations and local display/UI.
-- **[LilyGo 4.7](https://github.com/MichalMatu/LilyGo_4.7)** — ESP32-S3 e-paper/touch integration with LVGL and a separated hardware/UI structure.
+- **[LilyGo 4.7](https://github.com/MichalMatu/hardware-lab/tree/main/projects/LilyGo_4.7)** — ESP32-S3 e-paper/touch integration with LVGL and a separated hardware/UI structure.
 
 ---
 
