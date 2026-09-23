@@ -90,7 +90,7 @@ The codebase is split into API, core, database, models, schemas, serializers, se
 | Project | Focus | Main stack |
 | --- | --- | --- |
 | **[ESP32-C6 Zigbee Gateway](https://github.com/MichalMatu/esp32_c6_zigbee)** | Coordinator/gateway with formation, persistence, join/rejoin, discovery, reporting, sleepy-device handling and bounded runtime state | ESP32-C6 · ESP-IDF · C · Zigbee/ZCL/ZDO · FreeRTOS |
-| **[ESP32-S2 USB Wi-Fi Bridge](https://github.com/MichalMatu/esp32_s2_wifi)** | USB NCM ↔ Wi-Fi bridge for macOS with provisioning, diagnostics, UART recovery and coredumps | ESP32-S2 · ESP-IDF · C · TinyUSB · networking · TypeScript |
+| **[ESP32-S2 USB Wi-Fi Bridge](https://github.com/MichalMatu/hardware-lab/tree/main/projects/esp32_s2_wifi)** | USB NCM ↔ Wi-Fi bridge for macOS with provisioning, diagnostics, UART recovery and coredumps | ESP32-S2 · ESP-IDF · C · TinyUSB · networking · TypeScript |
 | **[ESP32-CAM Telegram](https://github.com/MichalMatu/hardware-lab/tree/main/projects/esp32-cam-telegram)** | ESP32-CAM/OV2640 motion camera with Telegram, microSD and a local web panel; build validated, hardware validation pending | ESP32-CAM · C++ · Arduino · PlatformIO · OV2640 · Telegram |
 | **[PCB workspace](https://github.com/MichalMatu/hardware-lab/tree/main/projects/pcb)** | Code-generated schematics and KiCad automation, reusable hardware blocks and an ESP32 DevKitC HAT around the AXP2101 PMIC | Python · SKiDL · KiCad · pcbnew API |
 | **[ESP32 Rust](https://github.com/MichalMatu/hardware-lab/tree/main/projects/esp_rs)** | `no_std` RISC-V firmware with I²C sensors and Rust quality/dependency tooling | Rust · ESP32-C3 · `esp-hal` · RISC-V |
