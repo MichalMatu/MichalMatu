@@ -1,10 +1,77 @@
 <h1 align="center">Michał Matuszewski</h1>
 <p align="center"><strong>Software · Embedded · Systems Developer</strong></p>
-<p align="center"><code>C/C++</code> · <code>Python</code> · <code>TypeScript</code> · <code>Kotlin</code> · <code>Rust</code> · <code>ESP-IDF</code> · <code>Linux</code> · <code>Android</code></p>
+<p align="center"><code>C/C++</code> · <code>Python</code> · <code>TypeScript</code> · <code>Kotlin</code> · <code>ESP-IDF</code> · <code>Android</code> · <code>Linux</code></p>
 
-I build practical systems across **embedded firmware, developer infrastructure, backend/web products, mobile applications, applied ML and hardware tooling**.
+I build practical systems where software has to deal with real constraints: hardware state, limited resources, unreliable networks, long-running processes, local data, explicit authority and failure recovery.
 
-I am most interested in projects where software has to deal with real constraints: limited memory, hardware state, wireless protocols, process failures, unreliable networks, persistent data and long-running operation. I prefer explicit contracts, diagnostics and testable boundaries over hidden behavior.
+My work spans **embedded firmware, Android, developer infrastructure, local-first products, applied ML and hardware tooling**. I prefer explicit contracts, observable state and testable boundaries over hidden behavior.
+
+## Current flagship projects
+
+### [AI Calls](https://github.com/MichalMatu/ai-calls)
+
+Android research/product prototype for completing bounded real-world tasks over ordinary cellular calls on a stock Samsung phone. The system combines real call audio, local Polish STT/TTS, on-device Gemma 4 through LiteRT-LM, deterministic dialogue paths and an application-owned authorization layer for external effects.
+
+**Engineering signal:** real-device telephony · local inference · safety/authority boundaries · Android services · STT/TTS · failure recovery
+
+**Stack:** `Kotlin` · `Android` · `Gemma 4` · `LiteRT-LM` · `STT/TTS` · `Shizuku`
+
+### [Local Agent](https://github.com/MichalMatu/local-agent)
+
+Deterministic local execution infrastructure for AI-assisted development. A planner defines exact work; Local Agent executes it locally under explicit time, memory, repository and resource constraints and publishes machine-readable evidence of what actually happened.
+
+It includes multi-repository scheduling, isolated workspaces, durable claims/results, process-group lifecycle control, watchdogs, crash recovery, repository/resource leases, Git-backed control state, emergency controls and macOS `launchd` deployment.
+
+**Stack:** `Python` · `Git` · `process groups` · `threads` · `file locking` · `launchd` · `GitHub Actions`
+
+### [Shelly Link](https://github.com/MichalMatu/shelly-link)
+
+Local-first Android app for configuring a thermostat-style climate automation without a hub. The phone configures and diagnoses; a Shelly Plug S Gen3 executes the installed automation locally using BLE thermometer data, so the default path does not require Home Assistant, MQTT, cloud services or a 24/7 server.
+
+The project has a verified real-hardware path, published Android beta builds and an accepted UX baseline.
+
+**Stack:** `Kotlin` · `Android` · `Shelly RPC/Scripts` · `BLE/BTHome` · `local-first automation`
+
+**Project page:** https://michalmatu.github.io/shelly-link/
+
+### [BloomML](https://github.com/MichalMatu/bloomml)
+
+Native ESP-IDF growbox controller for ESP32-S3 with deterministic climate control, real sensors, RF433 outputs, durable telemetry, e-ink operator UI and TinyML research tooling.
+
+Production control remains deterministic and safety-owned; ML is deliberately kept in a shadow/research role. The firmware includes a native SSD1680 display path, Clay-rendered operator pages, host-side C++ tests and hardware-focused verification flows.
+
+**Stack:** `ESP32-S3` · `ESP-IDF` · `C++17/20` · `FreeRTOS` · `SCD41` · `RF433` · `e-ink` · `TinyML`
+
+### [GrowClip](https://github.com/MichalMatu/growclip-site)
+
+Public showcase for my larger private ESP32-S3 automation platform. GrowClip combines a node-based automation runtime, sensor integrations, BLE/MQTT connectivity, persistent history/archive, an embedded web interface and device-side UI across constrained display targets.
+
+The full firmware/runtime stays private; the public repository contains the marketing site, product mockups and a standalone LiteGraph demo.
+
+**Stack:** `ESP32-S3` · `C/C++` · `FreeRTOS` · `BLE` · `MQTT` · `microSD` · `Clay` · `SvelteKit`
+
+**Live:** https://michalmatu.github.io/growclip-site/
+
+---
+
+## Strong public projects
+
+| Project | Focus | Main stack |
+| --- | --- | --- |
+| **[BlueEye Tracker](https://github.com/MichalMatu/tracker)** | Local-first Bluetooth/BLE situational-awareness app with explainable evidence, bounded ingest, Room persistence and field-tested Android scanning | Kotlin · Jetpack Compose · BLE/Bluetooth · Room · Hilt |
+| **[MatrixHub](https://github.com/MichalMatu/MatrixHub)** | ESP32-S3 sensor/display platform with SCD41, BLE, Wi-Fi CSI motion sensing, USB HID, notifications, Shelly integration and embedded web UI | ESP32-S3 · C/C++ · PlatformIO · TinyUSB · SvelteKit |
+| **[Miauudio](https://github.com/MichalMatu/miauudio)** | Android-first ambient audio mixer with native Media3 background playback, imported audio, procedural generators, PWA/web target and release tooling | TypeScript · React · Capacitor · Kotlin · Media3 |
+| **[PhotoMap](https://github.com/MichalMatu/photomap)** | Place-centric visual map platform with editorial media pipeline, moderation, FastAPI backend and React/Leaflet frontend | Python · FastAPI · SQLModel · React · TypeScript · Leaflet |
+
+---
+
+## Hardware, experiments and maintained work
+
+- **[Hardware Lab](https://github.com/MichalMatu/hardware-lab)** — consolidated firmware starters, board bring-up, ESP32-S2 USB networking, ESP32-C6/Zigbee experiments, Rust/ESP32, nRF52840, Raspberry Pi, e-paper, PCB/SKiDL/KiCad work and computer-vision experiments.
+- **[IleStoi.pl](https://github.com/MichalMatu/ilestoi)** — maintained map application for documenting long-standing vehicles in public space; now intentionally a low-priority maintenance project. Live: https://ilestoi.pl
+- **[Gesture Inspector](https://github.com/MichalMatu/gesture_inspektor)** — on-device MediaPipe gesture-recognition Android project.
+
+---
 
 ## Engineering profile
 
@@ -12,150 +79,15 @@ I am most interested in projects where software has to deal with real constraint
 | --- | --- |
 | **Embedded & low-level** | ESP32-S3 / C6 / S2, ESP-IDF, PlatformIO, FreeRTOS, BLE, Zigbee, Wi-Fi, MQTT, USB, I²C, SPI, UART |
 | **Systems & backend** | Python, process supervision, Git automation, SQLite, FastAPI, HTTP APIs, WebSocket, Linux/macOS services |
-| **Frontend & mobile** | TypeScript, React, SvelteKit, Android, Kotlin, Jetpack Compose, Vite, Playwright |
-| **Applied ML / vision** | TinyML, generated C inference, YOLO, OpenCV, MediaPipe, simulation and calibration tooling |
+| **Android & frontend** | Kotlin, Jetpack Compose, TypeScript, React, SvelteKit, Vite, Playwright |
+| **Applied ML / vision** | on-device LLM inference, TinyML, YOLO, OpenCV, MediaPipe, simulation and calibration tooling |
 | **Hardware** | KiCad, SKiDL, PCB automation, sensors, displays, power-management circuits, 3D-printing workflows |
-| **Quality & verification** | host tests, integration tests, static analysis, sanitizers, coverage, CI, memory/resource diagnostics, end-to-end checks |
-
----
-
-## Featured engineering
-
-### 1. [GrowClip — ESP32-S3 automation platform](https://github.com/MichalMatu/growclip)
-
-Public showcase for my larger private ESP32-S3 firmware platform. The system combines a node-based automation runtime, sensor integrations, BLE/MQTT connectivity, microSD history/archive, an embedded web interface and a Clay-rendered device UI across multiple display targets.
-
-The private firmware repository uses host-side Nodeflow tests, ASan/UBSan runs, coverage, static analysis, firmware architecture guardrails, memory-profile checks and load-testing tooling. The public repository exposes the product/architecture without publishing the full firmware source.
-
-**Stack:** `ESP32-S3` · `C/C++` · `PlatformIO` · `FreeRTOS` · `BLE` · `MQTT` · `microSD` · `Clay` · `TypeScript/Svelte`
-
-**Public showcase:** https://michalmatu.github.io/growclip/
-
-### 2. [local-agent](https://github.com/MichalMatu/local-agent)
-
-Deterministic local execution infrastructure for AI-assisted development. A planner defines the work; `local-agent` executes bounded tasks on the local machine and publishes machine-readable evidence of what actually happened.
-
-The current implementation includes multi-repository scheduling, isolated workspaces, OS execution leases, process-group lifecycle management, command/no-output/RSS watchdogs, durable task claims and result spooling, crash recovery, bounded Git retry behavior, self-update safeguards and macOS `launchd` deployment.
-
-**Engineering signals:** Linux/macOS process semantics · concurrency · durable state · failure recovery · resource limits · Git orchestration · unit/integration tests · macOS smoke tests
-
-**Stack:** `Python` · `Git` · `subprocess/process groups` · `threads` · `file locking` · `launchd` · `GitHub Actions`
-
-### 3. [Growbox ML Controller](https://github.com/MichalMatu/growbox-ml-controller)
-
-ESP32-S3 controller research project combining a portable C++ control library, deterministic safety supervision, generated TinyML inference, Python model/simulation tooling and browser-based hardware/chamber configurators.
-
-The portable controller is intentionally separated from ESP-IDF/Arduino concerns. CI verifies Python and ML tooling, portable C++ host tests, `clang-tidy`, an ESP-IDF firmware build plus `clang-check`, and the React/TypeScript frontend independently.
-
-**Stack:** `ESP32-S3` · `ESP-IDF` · `C++17` · `CMake/CTest` · `TinyML` · `Python` · `React` · `Three.js`
-
-**3D chamber configurator:** https://michalmatu.github.io/growbox-ml-controller/chamber-3d
-
-### 4. [MatrixHub](https://github.com/MichalMatu/MatrixHub)
-
-ESP32-S3 sensor/display platform that combines environmental sensing, BLE scanning, Wi-Fi CSI motion sensing, USB HID, local logging, HTTPS/JWT security, notifications and a SvelteKit control interface.
-
-The project includes native host-test environments and coverage support, API/architecture documentation, flash coredumps and explicit PSRAM/TLS memory tuning for a resource-constrained device.
-
-**Stack:** `ESP32-S3` · `C/C++` · `PlatformIO` · `BLE` · `Wi-Fi CSI` · `TinyUSB` · `SCD41` · `LittleFS` · `SvelteKit`
-
----
-
-## Real-world products
-
-### [IleStoi.pl / WreckScanner](https://github.com/MichalMatu/WreckScanner)
-
-A map-based application for documenting long-standing vehicles in public space. It combines field-photo ingestion and review, SQLite-backed state, privacy-safe image derivatives, historical WMS imagery, cadastral data, PDF report generation, administration and backup/restore tooling.
-
-The repository has separated HTTP/core layers, a broad Python test suite, frontend checks, architecture/data diagnostics, CI, smoke tests and an end-to-end `upload → review → map → PDF` flow.
-
-**Stack:** `Python` · `SQLite` · `Leaflet` · `WMS/GIS` · `Pillow/OpenCV` · `ReportLab` · `Cloudflare Tunnel` · `Restic`
-
-**Live:** https://ilestoi.pl
-
-### [PhotoMap.pl](https://github.com/MichalMatu/PhotoMaps)
-
-Visual place-discovery and editorial map platform built around a place-centric data model. The project includes a FastAPI/SQLModel backend, Alembic migrations, media/content pipelines, moderation-oriented services and a React/Leaflet frontend.
-
-The codebase is split into API, core, database, models, schemas, serializers, services and tests. CI runs a common quality gate with backend/frontend validation and Playwright-based browser checks.
-
-**Stack:** `Python` · `FastAPI` · `SQLModel` · `Alembic` · `React` · `TypeScript` · `Leaflet` · `Vite` · `Playwright`
-
-**Live:** https://photomap.pl
-
----
-
-## Embedded, hardware & protocol work
-
-| Project | Focus | Main stack |
-| --- | --- | --- |
-| **[ESP32-C6 Zigbee Gateway](https://github.com/MichalMatu/esp32_c6_zigbee)** | Coordinator/gateway with formation, persistence, join/rejoin, discovery, reporting, sleepy-device handling and bounded runtime state | ESP32-C6 · ESP-IDF · C · Zigbee/ZCL/ZDO · FreeRTOS |
-| **[ESP32-S2 USB Wi-Fi Bridge](https://github.com/MichalMatu/hardware-lab/tree/main/projects/esp32_s2_wifi)** | USB NCM ↔ Wi-Fi bridge for macOS with provisioning, diagnostics, UART recovery and coredumps | ESP32-S2 · ESP-IDF · C · TinyUSB · networking · TypeScript |
-| **[ESP32-CAM Telegram](https://github.com/MichalMatu/hardware-lab/tree/main/projects/esp32-cam-telegram)** | ESP32-CAM/OV2640 motion camera with Telegram, microSD and a local web panel; build validated, hardware validation pending | ESP32-CAM · C++ · Arduino · PlatformIO · OV2640 · Telegram |
-| **[PCB workspace](https://github.com/MichalMatu/hardware-lab/tree/main/projects/pcb)** | Code-generated schematics and KiCad automation, reusable hardware blocks and an ESP32 DevKitC HAT around the AXP2101 PMIC | Python · SKiDL · KiCad · pcbnew API |
-| **[ESP32 Rust](https://github.com/MichalMatu/hardware-lab/tree/main/projects/esp_rs)** | `no_std` RISC-V firmware with I²C sensors and Rust quality/dependency tooling | Rust · ESP32-C3 · `esp-hal` · RISC-V |
-| **[nRF52840](https://github.com/MichalMatu/hardware-lab/tree/main/projects/nrf52840)** | Nordic/PlatformIO firmware starter with a local board definition, OLED/buttons and development tooling | nRF52840 · C/C++ · PlatformIO |
-| **[Raspberry Pi Zero appliance](https://github.com/MichalMatu/hardware-lab/tree/main/projects/rp_pi2_zero)** | Headless Linux device setup, systemd hardening/boot optimization and e-paper status integration | Linux · systemd · shell · C/Python |
-
----
-
-## Applied ML, computer vision & mobile
-
-### [IPCam](https://github.com/MichalMatu/IPCam)
-
-Real-time IP-camera monitoring and evidence recording with YOLO-based `dog` / `person` detection. The pipeline supports ROI-aware inference, configurable runtime detection profiles, adaptive idle/active detection cadence, full-frame recording and automatic MPS → CPU fallback.
-
-**Stack:** `Python` · `OpenCV` · `YOLO/Ultralytics` · `Flask` · `MPS` · `OpenVINO` · `JavaScript`
-
-### [BlueEye Tracker](https://github.com/MichalMatu/tracker)
-
-Modular Android application for observing Bluetooth/BLE devices, maintaining a watchlist and presenting evidence/confidence around detections. It includes foreground scanning, Room-backed data, BLE decoder modules, Compose features and instrumented tests.
-
-**Stack:** `Kotlin` · `Jetpack Compose` · `BLE/Bluetooth` · `Room` · `Hilt` · `Android services`
-
-### [Gesture Inspector](https://github.com/MichalMatu/gesture_inspektor)
-
-MediaPipe-based Android project for on-device gesture recognition and gesture-to-action mapping, with explicit lifecycle handling, bounded inference behavior, privacy-oriented offline operation and an Android quality gate in CI.
-
-**Stack:** `Kotlin` · `Android` · `MediaPipe` · `CameraX` · `Gradle`
-
----
-
-## More selected work
-
-- **[Hardware Lab](https://github.com/MichalMatu/hardware-lab)** — consolidated board bring-up, firmware starters, PCB work and unfinished hardware experiments.
-- **[Local Climate Link](https://github.com/MichalMatu/local-climate-link-starter)** — local BLE/BTHome thermometer → Shelly automation without a cloud service or central hub.
-- **[Miauudio](https://github.com/MichalMatu/miauudio)** — Android-first ambient audio mixer built on a web/Capacitor stack with native Android media integration.
-- **[Arduino MQ](https://github.com/MichalMatu/Arduino_MQ)** — ATmega328P environmental/gas-sensor project with explicit safety limitations and local display/UI.
-- **[LilyGo 4.7](https://github.com/MichalMatu/hardware-lab/tree/main/projects/LilyGo_4.7)** — ESP32-S3 e-paper/touch integration with LVGL and a separated hardware/UI structure.
-
----
+| **Verification** | host/integration tests, hardware smoke tests, static analysis, sanitizers, coverage, CI and resource diagnostics |
 
 ## Development workflow
 
-I use **AI coding agents extensively** as part of my normal development workflow. I treat them as engineering tools rather than as a substitute for verification: I define constraints and architecture, review changes, debug integration failures and validate behavior with the strongest checks that make sense for the project.
+I use AI coding agents extensively, but keep execution and verification explicit. I define constraints and architecture, review changes, debug integration failures and validate behavior with the strongest checks appropriate for each project.
 
-Depending on the repository, that includes:
+Depending on the repository, that includes host/unit/integration tests, physical-device validation, compiler/static-analysis gates, ASan/UBSan, coverage, memory/resource diagnostics, schema/API validation, reproducible CI builds and end-to-end flows.
 
-- host/unit/integration tests and hardware smoke tests,
-- compiler and static-analysis gates,
-- ASan/UBSan, coverage and memory/resource diagnostics,
-- schema/API/data-contract validation,
-- reproducible CI builds and end-to-end flows,
-- physical-device validation for firmware and hardware-facing work.
-
-The [`local-agent`](https://github.com/MichalMatu/local-agent) project is also part of this workflow: it provides deterministic, bounded execution of agent-planned tasks across my local repositories.
-
-## Technology map
-
-**Languages:** `C` · `C++` · `Python` · `TypeScript/JavaScript` · `Kotlin` · `Rust`
-
-**Embedded:** `ESP-IDF` · `PlatformIO` · `FreeRTOS` · `BLE` · `Zigbee` · `Wi-Fi` · `MQTT` · `USB/TinyUSB` · `I²C/SPI/UART`
-
-**Software:** `FastAPI` · `SQLite/SQLModel` · `React` · `SvelteKit` · `Android/Compose` · `Linux/systemd` · `Git automation`
-
-**ML / vision:** `TinyML` · `YOLO` · `OpenCV` · `MediaPipe` · simulation/calibration tooling
-
-**Hardware:** `KiCad` · `SKiDL` · PCB automation · sensors · displays · power management
-
-**Quality:** `GitHub Actions` · host tests · integration/e2e tests · `clang-tidy` · `cppcheck` · `Ruff` · sanitizers · coverage · static analysis
+[`Local Agent`](https://github.com/MichalMatu/local-agent) is part of that workflow: it gives AI-planned work a deterministic, bounded and auditable execution layer across my local repositories.
